@@ -1,0 +1,9 @@
+"Phrases"
+{
+  "voice blocked"
+  {
+    "en"    "Please wait for the channel to calm down before talking"
+    "es"    "Por favor espera a que haya menos gente hablando a la vez"
+    "ru"		"Подождите пока разгрузится канал, тогда сможете говорить."
+  }
+}

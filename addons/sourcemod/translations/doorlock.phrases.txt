@@ -1,0 +1,72 @@
+"Phrases"
+{
+	//Chat items
+	"DL_Ready"
+	{
+		"en"			"%s is ready."
+		"ru"			"%s готов."
+		"es"			"%s listo."
+	}
+	"DL_Unready"
+	{
+		"en"			"%s is unready."
+		"ru"			"%s не готов."
+		"es"			"%s aun no esta listo."
+	}
+	"DL_Moveout"
+	{
+		"en"			"Move out"
+		"ru"			"Выходите"
+		"es"			"Dale prro."
+	}
+	"DL_Locked"
+	{
+		"en"			"Door locked. Please wait: %i"
+		"ru"			"Дверь заблокирована. Пожалуйста, подождите: %i"
+		"es"			"Puerta desbloqueda en: %i s"
+	}
+	"DL_Frozen"
+	{
+		"en"			"Please wait: %i"
+		"ru"			"Пожалуйста, подождите: %i"
+		"es"			"Espera: %i"
+	}
+
+	//Menu items
+	"DL_Menu_Header"
+	{
+		"en"			"---------Players status---------"
+		"ru"			"---------Статус игроков---------"
+		"es"			"---------Estado del jugador---------"
+	}
+	"DL_Menu_Connecting"
+	{
+		"en"			"CONNECTING"
+		"ru"			"ПОДКЛЮЧАЮТСЯ"
+		"es"			"CONECTANDO"
+	}
+	"DL_Menu_Ingame"
+	{
+		"en"			"INGAME"
+		"ru"			"В ИГРЕ"
+		"es"			"EN JUEGO"
+	}
+	"DL_Menu_Fail"
+	{
+		"en"			"FAIL"
+		"ru"			"НЕУДАЧА"
+		"es"			"FALLO CONEXIÓN"
+	}
+	"DL_Menu_Ready"
+	{
+		"en"			"READY"
+		"ru"			"ГОТОВЫ"
+		"es"			"LISTO"
+	}
+	"DL_Menu_Unready"
+	{
+		"en"			"UNREADY"
+		"ru"			"НЕ ГОТОВЫ"
+		"es"			"AUN NO ESTA LISTO"
+	}
+}

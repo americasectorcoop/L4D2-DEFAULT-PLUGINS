@@ -1,0 +1,90 @@
+"Games"
+{
+    "left4dead"
+    {
+		/* unneeded now
+        "Offsets"
+        {
+            "RoundRespawn"
+            {
+                "windows"    "488"
+                "linux"        "491"
+            }
+        }
+		*/
+		
+		"Signatures"
+		{
+			/* CTerrorPlayer::RoundRespawn */
+			"RoundRespawn"
+			{
+				"library"	"server"
+				"linux"		"@_ZN13CTerrorPlayer12RoundRespawnEv"
+				"windows"	"\x56\x8B\xF1\xE8\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\x84\xC0\x75"
+				/* 56 8B F1 E8 ? ? ? ? E8 ? ? ? ? 84 C0 75	*/
+				/* previous function in vtable has a string */
+			}
+		}
+
+    }
+    "left4dead2"
+    {
+		/* unneeded now
+        "Offsets"
+        {
+            "RoundRespawn"
+            {
+                "windows"    "512"
+                "linux"        "513"
+            }
+        }
+		*/
+		
+		"Signatures"
+		{
+			/* CTerrorPlayer::RoundRespawn */
+			"RoundRespawn"
+			{
+				"library"	"server"
+				"linux"		"@_ZN13CTerrorPlayer12RoundRespawnEv"
+				"windows"	"\x56\x8B\xF1\xE8\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\x84\xC0\x75"
+				/* 56 8B F1 E8 ? ? ? ? E8 ? ? ? ? 84 C0 75	*/
+			}
+		
+			/* CTerrorPlayer::BecomeGhost(bool) */
+			"BecomeGhost"
+			{
+				"library"	"server"
+				"linux"		"@_ZN13CTerrorPlayer11BecomeGhostEb"
+				"windows"	"\x55\x8B\xEC\x53\x8B\x5D\x2A\x56\x53\x8B\xF1\xE8\x2A\x2A\x2A\x2A\x84"
+				/* 55 8B EC 53 8B 5D ? 56 53 8B F1 E8 ? ? ? ? 84 */
+			}
+			
+			/* CCSPlayer::State_Transition(CSPlayerState) */
+			"State_Transition"
+			{
+				"library"	"server"
+				"linux"		"@_ZN9CCSPlayer16State_TransitionE13CSPlayerState"
+				"windows"	"\x55\x8B\xEC\x56\x8B\xF1\x8B\x86\x2A\x2A\x2A\x2A\x57\x8B\x7D\x2A\x85\xC0\x74\x2A\x83"
+				/*	55 8B EC 56 8B F1 8B 86 ? ? ? ? 57 8B 7D ? 85 C0 74 ? 83	*/
+			}
+			
+			/*
+			*  CTerrorPlayer::OnRevived(void)
+			*
+			*  ->Search for string "revive_success", then open vtables window. Should be the 5th member.
+			*  Left4Downtown2 patches this function, which will prevent Sourcemod from finding it
+			*  That is why the first six bytes are wild cards
+			*  With so many wildcards at the start, we need many more bytes to find a unique signature
+			*  The original signature remains commented out, for posterity
+			*/
+			"CTerrorPlayer_OnRevived"
+			{
+				"library"   "server"
+				"linux"     "@_ZN13CTerrorPlayer9OnRevivedEv"
+				"windows"   "\x2A\x2A\x2A\x2A\x2A\x2A\x53\x56\x8B\xF1\x8B\x06\x8B\x90\x2A\x2A\x2A\x2A\x57\xff\xd2\x84\xc0\x0f\x84\x2A\x2A\x2A\x2A\x8B\xCE"
+				/* ? ? ? ? ? ? 53 56 8B F1 8B 06 8B 90 ? ? ? ? 57 ff d2 84 c0 0f 84 ? ? ? ? 8B CE */
+			}
+		}
+    }
+}
